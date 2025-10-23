@@ -28,7 +28,11 @@ public class Main {
      */
     public static double safeDivision(double a, double b) {
         // todo: Handle the unchecked ArithmeticException by returning 0.
-        return divide(a, b);
+        try {
+            return divide(a, b);
+        } catch (ArithmeticException e) {
+            return 0;
+        }
     }
 
     /**
